@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body{
+    background: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
+    color: white;
+    background-attachment: fixed;
+  background-size: cover;
+}

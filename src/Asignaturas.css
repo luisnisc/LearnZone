@@ -1,0 +1,26 @@
+#nombres-a{
+    border: 1px solid #1f2937;
+    color: white;
+    width: 250px;
+    height: 25px;
+    border-radius: 10px;
+    
+    background-color: transparent ;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size:medium !important;
+}
+#nombres-a:hover{
+    color: #366ac2;
+    background-color: #1f2937;
+    transition: 600ms;
+    box-shadow: 3px 3px 3px #303946;
+ 
+}
+#botones{
+    margin-top:21em;
+}
+ 
+
+html{
+background-size: cover
+}

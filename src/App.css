@@ -1,0 +1,13 @@
+input:focus{
+    border:1px solid purple;
+}
+
+.Icono{
+    float:right;
+    margin-top:1em;
+    
+    
+}
+#footer{
+    bottom:0;
+}
