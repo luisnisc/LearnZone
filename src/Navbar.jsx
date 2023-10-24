@@ -1,9 +1,11 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import { Helmet } from 'react-helmet'
 import"./App.css"
 export default function Navbar() {
   return (
     <>
+    
     <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.5/dist/flowbite.min.css" />
 <nav style={{position:"fixed",top:"0",width:"100%"}}className="bg-gray-800 border-gray-200 ">
     <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 m">
@@ -38,7 +40,9 @@ export default function Navbar() {
       
     </div>
   </nav>
-  <script src="https://unpkg.com/flowbite@1.4.5/dist/flowbite.js"></script>
+  <Helmet>
+    <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+  </Helmet>
     </>
   )
 }
