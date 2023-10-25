@@ -24,7 +24,8 @@ const router = createBrowserRouter([
         {
             path : "/asignaturas",
             element:<Asignaturas/>,
-        }
+        },
+
 
 
     ]

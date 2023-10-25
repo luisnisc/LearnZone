@@ -11,3 +11,17 @@ input:focus{
 #footer{
     bottom:0;
 }
+#lista{
+    
+    
+}
+#card-examen{
+    background-color: rgba(255, 255, 255, 0.582);
+    box-shadow: 3px 3px 3px rgb(0, 108, 209) ;
+}
+#asignatura{
+    background-color: rgba(255, 255, 255, 0.582);
+}
+#fecha{
+    background-color: rgba(255, 255, 255, 0.582);
+}

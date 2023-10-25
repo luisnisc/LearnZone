@@ -1,6 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import { Helmet } from 'react-helmet'
+import Avatar from '@mui/material/Avatar'
 import"./App.css"
 export default function Navbar() {
   return (
@@ -9,6 +10,8 @@ export default function Navbar() {
     <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.5/dist/flowbite.min.css" />
 <nav style={{position:"fixed",top:"0",width:"100%"}}className="bg-gray-800 border-gray-200 ">
     <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 m">
+    <Avatar alt="Remy Sharp" className='hover:scale-100' src="https://th.bing.com/th/id/OIG.446_X7Z4gi9Q4uIWHhuK?pid=ImgGn" sx={{ width: 40, height: 40 }}/>
+    
       <a href="" className="flex items-center">
           
       </a>
@@ -27,7 +30,7 @@ export default function Navbar() {
             <a href="" className="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0 ">About</a>
           </li>
           <li>
-            <Link to="/asignaturas" className="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0  md:hover:text-blue-500 ">Asignaturas</Link>
+            <Link to="/asignaturas" className="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0  md:hover:text-blue-500 ">Apuntes</Link>
           </li>
           <li>
             <Link to="/examenes" className="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0  ">Exámenes</Link>
