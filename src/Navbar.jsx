@@ -1,10 +1,19 @@
 import React from 'react'
+import { useEffect } from 'react'
 import {Link} from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 import Avatar from '@mui/material/Avatar'
+import { useParams } from 'react-router-dom'
 import"./App.css"
-export default function Navbar() {
+export default function Navbar(posicion) {
+  useEffect(() => {
+    
+  })
+  const {loc} = useParams()
+  
+  console.log(loc)
   return (
+
     <>
     
     <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.5/dist/flowbite.min.css" />
@@ -24,16 +33,16 @@ export default function Navbar() {
       <div className="hidden w-full md:block md:w-auto" id="navbar-default">
         <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:border-0 ">
           <li>
-            <Link to="/" className="block py-2 pl-3 pr-4 text-blue-500 bg-purple-900 rounded md:bg-transparent md:text-purple-500 md:p-0 " aria-current="page">Home</Link>
+            <Link to="/home" className={loc== "home" ? "block py-2 pl-3 pr-4 text-blue-500 bg-purple-900 rounded md:bg-transparent md:text-purple-500 md:p-0 " : "block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 md:hover:text-blue-500 "} aria-current="page">Home</Link>
           </li>
           <li>
-            <a href="" className="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0 ">About</a>
+            <a href="/about/about" className={loc== "about" ? "block py-2 pl-3 pr-4 text-blue-500 bg-purple-900 rounded md:bg-transparent md:text-purple-500 md:p-0 " : "block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 md:hover:text-blue-500 "}>About</a>
           </li>
           <li>
-            <Link to="/asignaturas" className="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0  md:hover:text-blue-500 ">Apuntes</Link>
+            <Link to="/asignaturas/asignaturas" className={loc== "asignaturas" ? "block py-2 pl-3 pr-4 text-blue-500 bg-purple-900 rounded md:bg-transparent md:text-purple-500 md:p-0 " : "block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 md:hover:text-blue-500 "}>Apuntes</Link>
           </li>
           <li>
-            <Link to="/examenes" className="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0  ">Exámenes</Link>
+            <Link to="/examenes/examenes" className={loc== "examenes" ? "block py-2 pl-3 pr-4 text-blue-500 bg-purple-900 rounded md:bg-transparent md:text-purple-500 md:p-0 " : "block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 md:hover:text-blue-500 "}>Exámenes</Link>
           </li>
           <li>
             <a href="#" className="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0  ">Contact</a>

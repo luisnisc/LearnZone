@@ -4,7 +4,9 @@ import { pos } from "./components/Ft";
 import View from "./components/View";
 import Swal from "sweetalert2";
 import "./App.css"
+
 function Examen() {
+ 
   const rl = () => window.location.reload();
 
   const { register, handleSubmit } = useForm();

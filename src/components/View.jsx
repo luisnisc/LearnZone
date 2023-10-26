@@ -13,7 +13,7 @@ function View() {
   
     
    
-  const lista = b ? "md:grid md:gap-4 md:grid-cols-5 md:grid-rows md:ml-4 grid ml-4 mb-24 mt-2 " : "grid grid-col mb-24 justify-center items-center ";
+  const lista = b ? "md:grid md:gap-4 md:grid-cols-5 md:grid-rows md:ml-4 grid ml-4 mb-24 mt-2 duration-500" : "grid grid-col mb-24 justify-center items-center duration-500";
   
  
   const fetchData = async () => {
@@ -31,7 +31,13 @@ function View() {
     try {
       await axios.delete(`http://192.168.7.151:8000/clase/api/api/${id}/`);
       setEx((prevEx) => prevEx.filter((item) => item.id !== id));
-      Swal.fire(`Examen ${id} borrado`);
+      Swal.fire({
+        customClass: {
+          confirmButton: 'swalBtnColor'
+        },
+        title: 'Examen borrado',
+        icon: 'success'
+      });
     } catch (error) {
       Swal.fire('Error deleting item: ' + error.message);
     }

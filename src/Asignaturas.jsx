@@ -15,6 +15,7 @@ import Swal from 'sweetalert2';
 import FilterAlt from '@mui/icons-material/FilterAlt';
 import "./App.css"
 import {BsGridFill} from 'react-icons/bs'
+
 export default function Asignaturas() {
   const [state, setState] = React.useState({
     top: false,
@@ -45,7 +46,7 @@ export default function Asignaturas() {
         {['BBDD', 'Ingles', 'Sistemas', 'FCN', 'Programación'].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
-              <ListItemText primary={text} />
+              <ListItemText  primary={text} />
             </ListItemButton>
           </ListItem>
         ))}
@@ -57,7 +58,7 @@ export default function Asignaturas() {
   const [b, setb] = useState(true);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const lista = b ? "md:grid md:gap-4 md:grid-cols-5 md:grid-rows-3 md:ml-12 grid  mb-24 mt-14" : "flex flex-col mb-24 justify-center items-center";
+  const lista = b ? "md:grid md:gap-4 md:grid-cols-5 md:grid-rows-3 md:ml-12 grid grid-cols-5 grid-rows-3 gap-4  mb-24 mt-20 mr-12 duration-500" : "flex flex-col mb-24 justify-center items-center duration-500";
   
  
   const fetchData = async () => {
@@ -75,7 +76,13 @@ export default function Asignaturas() {
     try {
       await axios.delete(`http://192.168.7.151:8000/clase/api/apunte/${id}/`);
       setEx((prevEx) => prevEx.filter((item) => item.id !== id));
-      Swal.fire(`Apunte borrado`);
+      Swal.fire({
+        customClass: {
+          confirmButton: 'swalBtnColor'
+        },
+        title: 'Apunte borrado',
+        icon: 'success'
+      });
     } catch (error) {
       Swal.fire('Error deleting item: ' + error.message);
     }
@@ -94,7 +101,7 @@ export default function Asignaturas() {
   }
   return (
     <>
-    <div className="mt-20 ">
+    <div className=" fixed">
       {['left'].map((anchor) => (
         <React.Fragment key={anchor}>
           <Button className="text-white float-left"onClick={toggleDrawer(anchor, true)}><FilterAlt></FilterAlt></Button>
@@ -110,13 +117,17 @@ export default function Asignaturas() {
     </div>
     
 
-    <div className=' mr-4 '>
-  <button className='Icono hover:text-blue-700'><BsGridFill/></button>
+    <div className=' mr-4 mt-20'>
+  <button className='Icono hover:text-blue-700 fixed right-6'  onClick={()=>setb(!b)}><BsGridFill/></button>
   </div>
+  
+  
   <div id="lista"className={`${lista}`}>
-  <ul className='mb-80 '>
+    
+
+    
     {ex.map((item) => (
-      <div key={item.id} id="card-examen" className='max-w-sm p-6  border border-gray-200 rounded-lg shadow  my-10 break-words'>
+      <div key={item.id} id="card-apuntes" className='max-w-sm p-6  border border-gray-200 rounded-lg shadow  my-10 break-words h-fit'>
       
         <p className='mb-3 font-normal text-gray-700 dark:text-gray-400'>
         <strong>Asignatura:</strong> {item.Asignatura} <br />
@@ -130,7 +141,7 @@ export default function Asignaturas() {
         </div>
       </div>
     ))}
-  </ul>
+
   </div>
 </>
   );

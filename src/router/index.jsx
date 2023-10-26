@@ -4,17 +4,18 @@ import Examen from "../Examen";
 import Error404 from "../Error404";
 import Layout from "../Layout";
 import Asignaturas from "../Asignaturas";
+import AboutPage from "../components/About";
 const router = createBrowserRouter([
 {
     element:<Layout/>,
     children:[
         {
-            path:'/',
+            path:'/:loc',
             element: <App/>
         },
         
         {
-            path : '/examenes',
+            path : '/examenes/:loc',
             element: <Examen/>,
         },
         {
@@ -22,9 +23,13 @@ const router = createBrowserRouter([
             element:<Error404/>
         },
         {
-            path : "/asignaturas",
+            path : "/asignaturas/:loc",
             element:<Asignaturas/>,
         },
+        {
+            path: "/about/:loc",
+            element:<AboutPage/>,
+        }
 
 
 
