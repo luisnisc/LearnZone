@@ -17,13 +17,13 @@ const AboutPage = () => {
         <div className="bg-blue-500 p-6 rounded-lg shadow-lg">
           <h2 className="text-2xl font-bold mb-4"><a target="_blank" href='https://github.com/luisnisc'>Luis</a></h2>
           <p className="text-xl">
-            En este proyecto he sido el encargado tanto del Web desing y del Front-end.
+            En este proyecto he sido el encargado tanto del Web desing como del Front-end.
           </p>
         </div>
         <div className="bg-blue-500 p-6 rounded-lg shadow-lg">
           <h2 className="text-2xl font-bold mb-4"><a target="_blank" href='https://github.com/unaiccz'>Unai</a></h2>
           <p className="text-xl">
-            Información sobre el desarrollador 2, como su experiencia laboral, sus habilidades técnicas y su rol en el proyecto.
+            Información sobre el desarrollador 2, encargado del desarrollo del backend con <strong>Django</strong> y REST_FRAMEWORK.
           </p>
         </div>
       </div>
