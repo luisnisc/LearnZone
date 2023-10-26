@@ -17,7 +17,7 @@ const AboutPage = () => {
         <div className="bg-blue-500 p-6 rounded-lg shadow-lg">
           <h2 className="text-2xl font-bold mb-4"><a target="_blank" href='https://github.com/luisnisc'>Luis</a></h2>
           <p className="text-xl">
-            En este proyecto he sido el encargado tanto del Web desing como del Front-end.
+            En este proyecto he sido el encargado tanto del Web desing como del Front-end, he usado las siguientes herramientas: <strong>React</strong> y <strong>TailwindCss</strong>
           </p>
         </div>
         <div className="bg-blue-500 p-6 rounded-lg shadow-lg">
