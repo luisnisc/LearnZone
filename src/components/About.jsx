@@ -3,11 +3,11 @@ import React from 'react';
 
 const AboutPage = () => {
  return (
-    <div className="container mx-auto px-4 mt-24">
-      <div className="bg-blue-500 p-6 rounded-lg">
+    <div className="container mx-auto px-4 mt-56 justify-center">
+      <div className="bg-blue-500 p-6 rounded-lg shadow-lg">
         <h1 className="text-4xl font-bold text-white">Acerca de</h1>
         <p className="text-xl mt-4 text-white">
-          Somos dos desarrolladores apasionados por el mundo de la educación y la tecnología que nos han permitido crear esta aplicación.
+          Somos dos desarrolladores apasionados por el mundo de la tecnología que hemos creado esta aplicación.
         </p>
         <p className="text-xl mt-4 text-white">
           Nuestro objetivo es facilitar el acceso y la organización de apuntes y fechas de examenes, ofreciendo a los usuarios una experiencia intuitiva y atractiva.
@@ -17,7 +17,7 @@ const AboutPage = () => {
         <div className="bg-blue-500 p-6 rounded-lg shadow-lg">
           <h2 className="text-2xl font-bold mb-4"><a target="_blank" href='https://github.com/luisnisc'>Luis</a></h2>
           <p className="text-xl">
-            En este proyecto he sido el encargado tanto del Web desing como del Front-end, he usado las siguientes herramientas: <strong>React</strong> y <strong>TailwindCss</strong>
+            En este proyecto he sido el encargado tanto del Web Desing como del Front-end, he usado las siguientes herramientas: <strong>React</strong> y <strong>Tailwind</strong>
           </p>
         </div>
         <div className="bg-blue-500 p-6 rounded-lg shadow-lg">

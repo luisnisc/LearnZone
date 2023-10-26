@@ -5,6 +5,7 @@ import Error404 from "../Error404";
 import Layout from "../Layout";
 import Asignaturas from "../Asignaturas";
 import AboutPage from "../components/About";
+import Contact from "../components/Contacto";
 const router = createBrowserRouter([
 {
     element:<Layout/>,
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
         {
             path: "/about/:loc",
             element:<AboutPage/>,
+        },
+        {
+            path: "/contacto/:loc",
+            elemnt:<Contact/>
         }
 
 

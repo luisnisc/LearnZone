@@ -9,7 +9,6 @@ function View() {
   
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  let bloc;
   
     
    
@@ -63,12 +62,12 @@ function View() {
     <h3 className='text-center mb-1 mt-1'>Examenes</h3>
       <hr />
       <div className='float-right'>
-      <button className='Icono hover:text-blue-700' onClick={()=>setb(!b)}><BsGridFill/></button>
+      <button className='Icono hover:text-blue-700 ' onClick={()=>setb(!b)}><BsGridFill/></button>
       </div>
       <div id="lista"className={`${lista} `}>
       
         {ex.map((item) => (
-          <div key={item.id} id="card-examen" className='p-6 max-w-m  border border-gray-200 rounded-lg shadow  my-10 h-60  '>
+          <div key={item.id} id="card-examen" className='p-6 max-w-m  border border-gray-200 rounded-lg shadow  my-10 h-60 '>
           
             <p className='mb-3 font-normal text-gray-700  overflow-hidden'>
             <strong>Asignatura:</strong> {item.asignature} <br />

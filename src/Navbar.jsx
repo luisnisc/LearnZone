@@ -11,7 +11,7 @@ export default function Navbar(posicion) {
   })
   const {loc} = useParams()
   
-  console.log(loc)
+ 
   return (
 
     <>
@@ -45,7 +45,7 @@ export default function Navbar(posicion) {
             <Link to="/examenes/examenes" className={loc== "examenes" ? "block py-2 pl-3 pr-4 text-blue-500 bg-purple-900 rounded md:bg-transparent md:text-purple-500 md:p-0 " : "block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 md:hover:text-blue-500 "}>Exámenes</Link>
           </li>
           <li>
-            <a href="#" className="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0  ">Contact</a>
+            <a href="/contacto/contacto" className={loc== "contacto" ? "block py-2 pl-3 pr-4 text-blue-500 bg-purple-900 rounded md:bg-transparent md:text-purple-500 md:p-0 " : "block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 md:hover:text-blue-500 "}>Contacto</a>
           </li>
         </ul>
       </div>
