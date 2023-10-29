@@ -12,7 +12,8 @@ input:focus{
     bottom:0;
 }
 #lista{
-    
+    border:1px solid black;
+    display: grid;
     
 }
 #card-examen{
@@ -34,4 +35,7 @@ input:focus{
   }
   #navbar-default{
     user-select: none;
+  }
+  html::-webkit-scrollbar{
+    display: none;
   }
