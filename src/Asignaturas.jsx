@@ -6,24 +6,25 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import FilterAlt from '@mui/icons-material/FilterAlt';
 import "./App.css"
+import Swal from 'sweetalert2';
 import {BsGridFill} from 'react-icons/bs'
 import Filtro from './components/Filtro';
 export default function Asignaturas() {
   const rl = () => window.location.reload();
-  const handleDelete = async (id) => {
-    try {
-      await axios.delete(`http://192.168.7.151:8000/clase/api/apunte/${id}/`);
-      setEx((prevEx) => prevEx.filter((ex) => ex.id !== id));
-      Swal.fire({
-        customClass: {
-          confirmButton: 'swalBtnColor',
-        },
-        title: 'Apunte borrado',
-        icon: 'success'
-      });
-    } catch (error) {
+   const handleDelete = async (id) => {
+     try {
+       await axios.delete(`http://192.168.7.151:8000/clase/api/apunte/${id}/`);
+       setEx((prevEx) => prevEx.filter((ex) => ex.id !== id));
+       Swal.fire({
+         customClass: {
+           confirmButton: 'swalBtnColor',
+         },
+         title: 'Apunte borrado',
+         icon: 'success'
+       });
+     } catch (error) {
       Swal.fire('Error deleting item: ' + error.message);
-    }
+  }
   };
   const [Filter, setFilter] = useState("");
   const [state, setState] = React.useState({
@@ -119,7 +120,7 @@ export default function Asignaturas() {
   <button className='Icono  fixed right-6'  onClick={()=>setb(!b)}><BsGridFill/></button>
   </div>
   
-   <Filtro handleDelete={handleDelete()} setEx={setEx} b={b} ex={ex} Filter={Filter}/>
+   <Filtro  lista={lista} setEx={setEx} b={b} ex={ex} Filter={Filter}/>
   
 </>
   );
