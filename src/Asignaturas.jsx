@@ -13,7 +13,7 @@ export default function Asignaturas() {
   const handleDelete = async (id) => {
     try {
       await axios.delete(`http://192.168.7.151:8000/clase/api/apunte/${id}/`);
-      setEx((prevEx) => prevEx.filter((item) => item.id !== id));
+      setEx((prevEx) => prevEx.filter((ex) => ex.id !== id));
       Swal.fire({
         customClass: {
           confirmButton: 'swalBtnColor',
@@ -72,7 +72,7 @@ export default function Asignaturas() {
  
   const fetchData = async () => {
     try {
-      const response = await axios.get('http://192.168.1.129:8000/clase/api/apunte/');
+      const response = await axios.get('http://192.168.7.151:8000/clase/api/apunte/');
       setEx(response.data);
       setLoading(false);
     } catch (error) {
@@ -119,7 +119,7 @@ export default function Asignaturas() {
   <button className='Icono  fixed right-6'  onClick={()=>setb(!b)}><BsGridFill/></button>
   </div>
   
-   <Filtro  className={lista} ex={ex} Filter={Filter}/>
+   <Filtro handleDelete={handleDelete()} setEx={setEx} b={b} ex={ex} Filter={Filter}/>
   
 </>
   );
