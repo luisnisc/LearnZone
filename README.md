@@ -10,4 +10,6 @@ Currently, two official plugins are available:
 ![imagen](https://github.com/luisnisc/Clase_react_Blue_Edition/assets/91005401/ec8545e3-5dce-4408-a55c-dabb435b5d33)
 
 >to do
->* block button
+>[X] block button
+>[] CONTACT PAGE
+>[] LOGIN
