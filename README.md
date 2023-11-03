@@ -13,3 +13,4 @@ to do </br>
 [X] block button </br>
 [] CONTACT PAGE </br>
 [] LOGIN 
+[] Navbar Responsive
