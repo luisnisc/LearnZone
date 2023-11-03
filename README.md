@@ -12,5 +12,5 @@ Currently, two official plugins are available:
 to do </br>
 [X] block button </br>
 [] CONTACT PAGE </br>
-[] LOGIN 
+[] LOGIN </br>
 [] Navbar Responsive
