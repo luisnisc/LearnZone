@@ -8,7 +8,7 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 # Demostration image
 ![imagen](https://github.com/luisnisc/Clase_react_Blue_Edition/assets/91005401/ec8545e3-5dce-4408-a55c-dabb435b5d33)
-
+***</hr>***
 to do </br>
 [X] block button </br>
 [] CONTACT PAGE </br>
