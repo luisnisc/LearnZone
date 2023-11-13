@@ -52,5 +52,5 @@ to do </br>
 [X] block button </br>
 [] CONTACT PAGE </br>
 [] LOGIN </br>
-[] Navbar Responsive
+[] Navbar Responsive </br>
 [] Añadir animación de zoom para ver los apuntes con framer motion
