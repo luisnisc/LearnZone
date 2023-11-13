@@ -53,3 +53,4 @@ to do </br>
 [] CONTACT PAGE </br>
 [] LOGIN </br>
 [] Navbar Responsive
+[] Añadir animación de zoom para ver los apuntes con framer motion
