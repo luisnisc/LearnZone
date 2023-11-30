@@ -12,7 +12,6 @@ input:focus{
     bottom:0;
 }
 #lista{
-    border:1px solid black;
     display: grid;
     
 }
@@ -33,9 +32,7 @@ input:focus{
 .swal2-styled.swal2-confirm.swalBtnColor {
     background-color: #1e429f
   }
-  #navbar-default{
-    user-select: none;
-  }
+  
   html::-webkit-scrollbar{
     display: none;
   }
