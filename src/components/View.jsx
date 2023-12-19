@@ -11,7 +11,7 @@ function View() {
   const [error, setError] = useState(null);
 
   const lista = b
-    ? "md:grid md:gap-4 md:grid-cols-5 md:grid-rows md:ml-10 grid ml-7.5 mb-24 mt-2 duration-500"
+    ? "md:grid md:gap-4 md:grid-cols-5 md:grid-rows md:ml-10 grid ml-7.5 mb-24 ml-10 mt-2 duration-500"
     : "grid grid-col mb-24 justify-center items-center duration-500 ml-12";
 
   const fetchData = async () => {
