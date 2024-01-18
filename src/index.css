@@ -1,6 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Kenia&family=Poppins:wght@500;600&family=Ubuntu:wght@400;700&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+}
 body{
     background: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
     color: white;

@@ -23,7 +23,7 @@ export default function Navbar(posicion) {
         href="https://unpkg.com/flowbite@1.4.5/dist/flowbite.min.css"
       />
       <nav
-        style={{ position: "fixed", top: "0", width: "100%" }}
+        style={{ position: "fixed", top: "0", width: "100%", zIndex: 2 , userSelect: "none"}}
         className="bg-gray-800 border-gray-200 "
       >
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 m">

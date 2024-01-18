@@ -9,7 +9,7 @@ const AboutPage = () => {
         transition={{ duration: 0.5 }}
       >
         <div
-          style={{}}
+          style={{zIndex: 1}}
           className="container mx-auto px-4 mt-56 justify-center"
         >
           <motion.div
