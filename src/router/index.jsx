@@ -6,6 +6,7 @@ import Layout from "../Layout";
 import Asignaturas from "../Asignaturas";
 import AboutPage from "../components/About";
 import Contact from "../components/Contacto";
+import FormularioApuntes from "../components/FormularioApuntes";
 const router = createBrowserRouter([
 {
     element:<Layout/>,
@@ -34,7 +35,12 @@ const router = createBrowserRouter([
         {
             path: "/contacto/:loc",
             elemnt:<Contact/>
+        },
+        {
+            path: "/formapuntes",
+            element:<FormularioApuntes/>
         }
+
 
 
 

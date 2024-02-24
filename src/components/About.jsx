@@ -10,7 +10,7 @@ const AboutPage = () => {
       >
         <div
           style={{zIndex: 1}}
-          className="container mx-auto px-4 mt-56 justify-center"
+          className="container mx-auto px-4 mt-64 justify-center"
         >
           <motion.div
             whileHover={{ scale: 1.1 }}
@@ -18,7 +18,8 @@ const AboutPage = () => {
             onHoverStart={(e) => {}}
             onHoverEnd={(e) => {}}
           >
-            <div className="bg-blue-500 p-6 rounded-lg shadow-lg">
+            
+            <div className="bg-blue-500 p-6 rounded-lg shadow-lg ">
               <h1 className="text-4xl font-bold text-white">Acerca de</h1>
               <p className="text-xl mt-4 text-white">
                 Somos dos desarrolladores apasionados por el mundo de la
@@ -30,6 +31,7 @@ const AboutPage = () => {
                 experiencia intuitiva y atractiva.
               </p>
             </div>
+            
           </motion.div>
           <motion.div
             whileHover={{ scale: 1.1 }}

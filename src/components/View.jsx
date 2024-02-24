@@ -17,7 +17,7 @@ function View() {
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        "http://192.168.7.151:8000/clase/api/api/"
+        "http://192.168.1.140:8000/clase/api/api/"
       );
       setEx(response.data);
       setLoading(false);
@@ -29,7 +29,7 @@ function View() {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://192.168.7.151:8000/clase/api/api/${id}/`);
+      await axios.delete(`http://192.168.1.140:8000/clase/api/api/${id}/`);
       setEx((prevEx) => prevEx.filter((item) => item.id !== id));
       Swal.fire({
         customClass: {

@@ -1,5 +1,6 @@
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
+import { Link } from "react-router-dom";
 import Button from "@mui/material/Button";
 import Divider from "@mui/material/Divider";
 import React, { useState, useEffect } from "react";
@@ -8,12 +9,13 @@ import FilterAlt from "@mui/icons-material/FilterAlt";
 import "./App.css";
 import Swal from "sweetalert2";
 import { BsGridFill } from "react-icons/bs";
+import { MdAddCircle } from "react-icons/md";
 import Filtro from "./components/Filtro";
 export default function Asignaturas() {
   const rl = () => window.location.reload();
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://192.168.7.151:8000/clase/api/apunte/${id}/`);
+      await axios.delete(`http://192.168.1.140:8000/clase/api/apunte/${id}/`);
       setEx((prevEx) => prevEx.filter((ex) => ex.id !== id));
       Swal.fire({
         customClass: {
@@ -96,6 +98,12 @@ export default function Asignaturas() {
         >
           Lenguaje de Marcas
         </button>
+        <button
+          className="hover:text-blue-500"
+          onClick={() => setFilter("PROGRAMACION")}
+        >
+          Programación
+        </button>
       </ul>
       <br />
       <hr />
@@ -113,7 +121,7 @@ export default function Asignaturas() {
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        "http://192.168.7.151:8000/clase/api/apunte/"
+        "http://192.168.1.140:8000/clase/api/apunte/"
       );
       setEx(response.data);
       setLoading(false);
@@ -155,7 +163,7 @@ export default function Asignaturas() {
           </React.Fragment>
         ))}
       </div>
-
+      
       <div className=" mr-4 mt-20">
         <button
           className="Icono  fixed right-6"
@@ -164,15 +172,23 @@ export default function Asignaturas() {
           <BsGridFill />
         </button>
       </div>
-
+      <div style={{ position: 'relative' }} className="float-left">
+  <Link to="/formapuntes">
+    <button style={{ position: 'absolute', left: '4em', scale: '1.4', marginTop:'18px'}}>
+      <MdAddCircle />
+    </button>
+  </Link>
+</div>
       <Filtro
-        className="mt-2"
+        className="mt-3"
         lista={lista}
         setEx={setEx}
         b={b}
         ex={ex}
         Filter={Filter}
       />
+      
+
     </>
   );
 }

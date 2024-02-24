@@ -28,6 +28,7 @@ input:focus{
 #card-apuntes{
     background-color: rgba(255, 255, 255, 0.582);
     box-shadow: 3px 3px 3px rgb(0, 108, 209) ;
+    overflow:hidden
 }
 .swal2-styled.swal2-confirm.swalBtnColor {
     background-color: #1e429f
@@ -36,3 +37,7 @@ input:focus{
   html::-webkit-scrollbar{
     display: none;
   }
+#formApuntes{
+    background-color: rgba(255, 255, 255, 0.582);
+    box-shadow: 3px 3px 3px rgb(0, 108, 209) ;
+}
